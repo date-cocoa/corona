@@ -16,6 +16,7 @@ g <-
   ggplot() + 
   geom_line(aes(x = date, y = number, color = week)) +
   ggtitle(title) +
-  xlab('month')
+  xlab('month') + 
+   scale_color_discrete(breaks=c('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'))
 
 ggsave('./img/soudan.png', width = 9, height = 5)
