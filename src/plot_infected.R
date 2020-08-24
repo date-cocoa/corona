@@ -21,4 +21,4 @@ g <-
   scale_color_discrete(breaks=c('月', '火', '水', '木', '金', '土', '日')) +
   ggtitle(title)
 
-ggsave('../img/infected.png', width = 9, height = 5)
+ggsave('./img/infected.png', width = 9, height = 5)

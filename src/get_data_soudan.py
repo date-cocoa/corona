@@ -60,4 +60,4 @@ if __name__ == '__main__':
     text = get_text_data(url)
     df = make_df_from_text(text)
     df = add_week_to_df(df)
-    df.to_csv('../data/data_sodan.csv', index=False)
+    df.to_csv('./data/data_sodan.csv', index=False)

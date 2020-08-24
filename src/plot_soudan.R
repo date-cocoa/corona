@@ -1,6 +1,6 @@
 library(tidyverse)
 
-df <- read_csv('../data/data_sodan.csv')
+df <- read_csv('./data/data_sodan.csv')
 
 my_theme <-
   theme_bw(base_family = "HiraKakuProN-W3") + 
@@ -18,4 +18,4 @@ g <-
   ggtitle(title) +
   xlab('month')
 
-ggsave('../img/soudan.png', width = 9, height = 5)
+ggsave('./img/soudan.png', width = 9, height = 5)
