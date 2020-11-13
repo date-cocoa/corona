@@ -1,7 +1,8 @@
 library(tidyverse)
+library(anytime)
 
 url <- 'https://stopcovid19.metro.tokyo.lg.jp/data/130001_tokyo_covid19_patients.csv'
-data <- read_csv(url)
+data <- read.csv(url)
 
 my_theme <-
   theme_bw(base_family = "HiraKakuProN-W3") + 
@@ -10,6 +11,9 @@ my_theme <-
 theme_set(my_theme) # set theme
 
 title <- paste0('報告感染者数_', Sys.Date())
+
+data$曜日 <- data$公表_年月日 %>% anydate() %>% weekdays()
+data$公表_年月日 <- data$公表_年月日 %>% anydate()
 
 g <- 
   data %>% 
